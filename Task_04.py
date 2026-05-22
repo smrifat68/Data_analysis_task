@@ -20,7 +20,7 @@ if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
         
         # 1. Dataset Preview Section
-        st.subheader("📋 Dataset Preview")
+        st.subheader("Dataset Preview")
         st.dataframe(df.head(10), use_container_width=True)
         
         # Display basic metadata
@@ -37,7 +37,7 @@ if uploaded_file is not None:
         all_cols = df.columns.tolist()
 
         # 2. Dynamic Chart Builder Section
-        st.subheader("📈 Interactive Chart Builder")
+        st.subheader("Interactive Chart Builder")
         
         # Sidebar controls for chart customization
         st.sidebar.header("Chart Settings")
@@ -88,7 +88,7 @@ if uploaded_file is not None:
             
         # 3. Data Summary Statistics
         st.markdown("---")
-        st.subheader("💡 Summary Statistics")
+        st.subheader(" Summary Statistics")
         st.dataframe(df.describe(include='all').fillna(''), use_container_width=True)
 
     except Exception as e:
@@ -96,7 +96,7 @@ if uploaded_file is not None:
 
 else:
     # Landing page state before file upload
-    st.info("👋 Welcome! Please upload a CSV file using the sidebar to get started.")
+    st.info(" Welcome! Please upload a CSV file using the sidebar to get started.")
     
     # Simple mockup visual of how it works
     st.image(
